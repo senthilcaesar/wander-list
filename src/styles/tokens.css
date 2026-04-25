@@ -1,0 +1,138 @@
+/* =====================================================
+   WANDER LIST — DESIGN TOKENS
+   Based on DESIGN-claude.md (warm editorial palette)
+   ===================================================== */
+
+:root {
+  /* ── Colors: Primary ── */
+  --color-near-black: #141413;
+  --color-terracotta: #c96442;
+  --color-coral: #d97757;
+
+  /* ── Colors: Surface ── */
+  --color-parchment: #f5f4ed;
+  --color-ivory: #faf9f5;
+  --color-white: #ffffff;
+  --color-warm-sand: #e8e6dc;
+  --color-dark-surface: #30302e;
+  --color-deep-dark: #141413;
+
+  /* ── Colors: Neutrals ── */
+  --color-charcoal-warm: #4d4c48;
+  --color-olive-gray: #5e5d59;
+  --color-stone-gray: #87867f;
+  --color-dark-warm: #3d3d3a;
+  --color-warm-silver: #b0aea5;
+
+  /* ── Colors: Borders ── */
+  --color-border-cream: #f0eee6;
+  --color-border-warm: #e8e6dc;
+  --color-border-dark: #30302e;
+  --color-ring-warm: #d1cfc5;
+  --color-ring-deep: #c2c0b6;
+
+  /* ── Colors: Semantic ── */
+  --color-error: #b53333;
+  --color-focus: #3898ec;
+
+  /* ── Typography ── */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* ── Font Sizes ── */
+  --fs-display: 4rem;        /* 64px */
+  --fs-section: 3.25rem;     /* 52px */
+  --fs-sub-lg: 2.3rem;       /* ~36px */
+  --fs-sub: 2rem;            /* 32px */
+  --fs-sub-sm: 1.6rem;       /* ~25px */
+  --fs-feature: 1.3rem;      /* 20.8px */
+  --fs-body-lg: 1.25rem;     /* 20px */
+  --fs-body: 1.06rem;        /* 17px */
+  --fs-body-std: 1rem;       /* 16px */
+  --fs-body-sm: 0.94rem;     /* 15px */
+  --fs-caption: 0.88rem;     /* 14px */
+  --fs-label: 0.75rem;       /* 12px */
+  --fs-overline: 0.63rem;    /* 10px */
+
+  /* ── Font Weights ── */
+  --fw-serif: 500;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* ── Line Heights ── */
+  --lh-tight: 1.10;
+  --lh-snug: 1.20;
+  --lh-normal: 1.30;
+  --lh-relaxed: 1.60;
+
+  /* ── Spacing (8px base) ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Border Radius ── */
+  --radius-sharp: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+
+  /* ── Shadows ── */
+  --shadow-ring: 0px 0px 0px 1px var(--color-ring-warm);
+  --shadow-ring-warm: #e8e6dc 0px 0px 0px 0px, #d1cfc5 0px 0px 0px 1px;
+  --shadow-whisper: rgba(0, 0, 0, 0.05) 0px 4px 24px;
+  --shadow-whisper-deep: rgba(0, 0, 0, 0.10) 0px 8px 32px;
+  --shadow-card-hover: rgba(0, 0, 0, 0.08) 0px 12px 40px, 0px 0px 0px 1px var(--color-border-warm);
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Container ── */
+  --container-max: 1240px;
+  --container-pad: var(--space-6);
+}
+
+/* =====================================================
+   DARK MODE OVERRIDES
+   Applied via [data-theme="dark"] on <html>
+   Follows DESIGN-claude.md warm dark palette
+   ===================================================== */
+
+[data-theme="dark"] {
+  --color-parchment:      #141413;
+  --color-ivory:          #1e1e1c;
+  --color-white:          #30302e;
+  --color-warm-sand:      #2a2a27;
+  --color-dark-surface:   #30302e;
+
+  --color-near-black:     #faf9f5;
+  --color-charcoal-warm:  #e8e6dc;
+  --color-olive-gray:     #b0aea5;
+  --color-stone-gray:     #87867f;
+  --color-dark-warm:      #d1cfc5;
+  --color-warm-silver:    #b0aea5;
+
+  --color-border-cream:   #30302e;
+  --color-border-warm:    #3d3d3a;
+  --color-ring-warm:      #4d4c48;
+  --color-ring-deep:      #5e5d59;
+
+  --shadow-whisper:        rgba(0, 0, 0, 0.25) 0px 4px 24px;
+  --shadow-whisper-deep:   rgba(0, 0, 0, 0.40) 0px 8px 32px;
+  --shadow-card-hover:     rgba(0, 0, 0, 0.35) 0px 12px 40px, 0px 0px 0px 1px #3d3d3a;
+  --shadow-ring-warm:      #2a2a27 0px 0px 0px 0px, #4d4c48 0px 0px 0px 1px;
+}
