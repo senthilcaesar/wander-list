@@ -18,7 +18,7 @@ function EmptyState({ query, onClear }) {
 
 export default function App() {
   const [view, setView]     = useState('grid');
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [query, setQuery]   = useState('');
   const [isPending, startTransition] = useTransition();
   const viewKey = useRef(0);
