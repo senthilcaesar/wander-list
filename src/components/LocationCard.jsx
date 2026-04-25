@@ -15,7 +15,7 @@ function getCategoryClass(category) {
 }
 
 export default function LocationCard({ location, index = 0 }) {
-  const { title, category, description, whatsSpecial, location: loc, status, rating, links } = location;
+  const { title, category, description, whatsSpecial, location: loc, status, rating, links, imageUrl } = location;
 
   return (
     <article
@@ -23,9 +23,13 @@ export default function LocationCard({ location, index = 0 }) {
       style={{ animationDelay: `${index * 60}ms` }}
       aria-label={`${title}, ${loc.country}`}
     >
-      {/* Category Art Panel */}
-      <div className={`category-art ${getCategoryClass(category)}`}>
-        <div className="art-vignette" />
+      {/* Image or Category Art Panel */}
+      <div className={`category-art ${!imageUrl ? getCategoryClass(category) : ''}`}>
+        {imageUrl ? (
+          <img src={imageUrl} alt={title} className="category-img" loading="lazy" />
+        ) : (
+          <div className="art-vignette" />
+        )}
       </div>
 
       <div className="card-body">

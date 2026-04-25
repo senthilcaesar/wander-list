@@ -15,7 +15,7 @@ function getCategoryClass(category) {
 }
 
 export default function LocationListItem({ location, index = 0 }) {
-  const { title, category, description, location: loc, status, rating, links } = location;
+  const { title, category, description, location: loc, status, rating, links, imageUrl } = location;
 
   return (
     <article
@@ -24,8 +24,10 @@ export default function LocationListItem({ location, index = 0 }) {
       aria-label={`${title}, ${loc.country}`}
     >
       <div className="list-item-inner">
-        {/* Color Block */}
-        <div className={`category-art-sm ${getCategoryClass(category)}`} />
+        {/* Image or Color Block */}
+        <div className={`category-art-sm ${!imageUrl ? getCategoryClass(category) : ''}`}>
+          {imageUrl && <img src={imageUrl} alt="" className="category-img" loading="lazy" />}
+        </div>
 
         {/* Content */}
         <div className="list-item-content">

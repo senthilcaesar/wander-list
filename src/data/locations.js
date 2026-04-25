@@ -1,18 +1,18 @@
 export const locations = [
   {
     id: 1,
-    title: "Santorini",
-    category: "Islands",
+    title: "Mount Lafayette",
+    category: "Mountains",
     description:
-      "Perched atop volcanic cliffs, Santorini's iconic whitewashed villages cascade down to the impossibly blue Aegean Sea. A place where every sunset feels like it was composed for you alone.",
+      "This extremely popular hike in the White Mountains of New Hampshire is one of the best day hikes in the area for a variety of reasons. Beginning near the Lafayette Campground in Franconia Notch State Park, this great hike offers some of the best views in New England! As a bonus, you will ascend three peaks including the highest mountain outside the Presidential Range - Mount Lafayette.",
     whatsSpecial:
-      "The caldera view from Oia at golden hour — the sky turns every shade of amber and rose before the last light disappears behind the volcano.",
-    location: { city: "Oia", country: "Greece", continent: "Europe" },
+      "Best for Hiking and Views.",
+    location: { city: "Franconia Notch State Park", country: "United States", continent: "North America" },
     status: "visited",
     rating: 5,
+    imageUrl: "/images/lafa.png",
     links: [
-      { label: "Travel Guide", url: "https://www.visitgreece.gr/islands/cyclades/santorini/" },
-      { label: "Best Restaurants", url: "https://www.tripadvisor.com/Restaurants-g189433-Santorini_South_Aegean.html" },
+      { label: "Travel Guide", url: "https://www.alltrails.com/trail/us/new-hampshire/mount-lafayette-and-franconia-ridge-trail-loop" },
     ],
   },
   {
