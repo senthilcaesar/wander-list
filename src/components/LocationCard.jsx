@@ -16,6 +16,7 @@ function getCategoryClass(category) {
 
 export default function LocationCard({ location, index = 0 }) {
   const { title, category, description, whatsSpecial, location: loc, status, rating, links, imageUrl } = location;
+  const fullImageUrl = imageUrl?.startsWith('/') ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}` : imageUrl;
 
   return (
     <article
@@ -26,7 +27,7 @@ export default function LocationCard({ location, index = 0 }) {
       {/* Image or Category Art Panel */}
       <div className={`category-art ${!imageUrl ? getCategoryClass(category) : ''}`}>
         {imageUrl ? (
-          <img src={imageUrl} alt={title} className="category-img" loading="lazy" />
+          <img src={fullImageUrl} alt={title} className="category-img" loading="lazy" />
         ) : (
           <div className="art-vignette" />
         )}

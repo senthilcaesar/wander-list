@@ -16,6 +16,7 @@ function getCategoryClass(category) {
 
 export default function LocationListItem({ location, index = 0 }) {
   const { title, category, description, location: loc, status, rating, links, imageUrl } = location;
+  const fullImageUrl = imageUrl?.startsWith('/') ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}` : imageUrl;
 
   return (
     <article
@@ -26,7 +27,7 @@ export default function LocationListItem({ location, index = 0 }) {
       <div className="list-item-inner">
         {/* Image or Color Block */}
         <div className={`category-art-sm ${!imageUrl ? getCategoryClass(category) : ''}`}>
-          {imageUrl && <img src={imageUrl} alt="" className="category-img" loading="lazy" />}
+          {imageUrl && <img src={fullImageUrl} alt="" className="category-img" loading="lazy" />}
         </div>
 
         {/* Content */}
