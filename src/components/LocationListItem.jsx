@@ -1,22 +1,35 @@
-import { MapPin } from 'lucide-react';
-import StatusBadge from './StatusBadge';
-import StarRating from './StarRating';
-import ExternalLinks from './ExternalLinks';
+import { MapPin } from "lucide-react";
+import StatusBadge from "./StatusBadge";
+import StarRating from "./StarRating";
+import ExternalLinks from "./ExternalLinks";
 
 function getCategoryClass(category) {
   const map = {
-    Islands: 'art-islands',
-    Historical: 'art-historical',
-    Coastal: 'art-coastal',
-    Mountains: 'art-mountains',
-    Cities: 'art-cities',
+    Islands: "art-islands",
+    Historical: "art-historical",
+    Coastal: "art-coastal",
+    Mountains: "art-mountains",
+    Waterfalls: "art-waterfalls",
+    Farms: "art-farms",
+    Cities: "art-cities",
   };
-  return map[category] ?? 'art-islands';
+  return map[category] ?? "art-islands";
 }
 
 export default function LocationListItem({ location, index = 0 }) {
-  const { title, category, description, location: loc, status, rating, links, imageUrl } = location;
-  const fullImageUrl = imageUrl?.startsWith('/') ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}` : imageUrl;
+  const {
+    title,
+    category,
+    description,
+    location: loc,
+    status,
+    rating,
+    links,
+    imageUrl,
+  } = location;
+  const fullImageUrl = imageUrl?.startsWith("/")
+    ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
+    : imageUrl;
 
   return (
     <article
@@ -26,8 +39,17 @@ export default function LocationListItem({ location, index = 0 }) {
     >
       <div className="list-item-inner">
         {/* Image or Color Block */}
-        <div className={`category-art-sm ${!imageUrl ? getCategoryClass(category) : ''}`}>
-          {imageUrl && <img src={fullImageUrl} alt="" className="category-img" loading="lazy" />}
+        <div
+          className={`category-art-sm ${!imageUrl ? getCategoryClass(category) : ""}`}
+        >
+          {imageUrl && (
+            <img
+              src={fullImageUrl}
+              alt=""
+              className="category-img"
+              loading="lazy"
+            />
+          )}
         </div>
 
         {/* Content */}
