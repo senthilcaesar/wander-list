@@ -30,7 +30,9 @@
 }
 .btn-warm-sand:hover {
   background: var(--color-ring-warm);
-  box-shadow: #e8e6dc 0px 0px 0px 0px, #c2c0b6 0px 0px 0px 1px;
+  box-shadow:
+    #e8e6dc 0px 0px 0px 0px,
+    #c2c0b6 0px 0px 0px 1px;
 }
 
 .btn-terracotta {
@@ -38,7 +40,9 @@
   color: var(--color-ivory);
   padding: 8px 16px 8px 12px;
   border-radius: var(--radius-md);
-  box-shadow: #c96442 0px 0px 0px 0px, #c96442 0px 0px 0px 1px;
+  box-shadow:
+    #c96442 0px 0px 0px 0px,
+    #c96442 0px 0px 0px 1px;
 }
 .btn-terracotta:hover {
   background: #b85538;
@@ -87,12 +91,14 @@
 .toggle-btn.active {
   background: var(--color-ivory);
   color: var(--color-charcoal-warm);
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.08), var(--shadow-ring);
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.08),
+    var(--shadow-ring);
 }
 
 .toggle-btn:not(.active):hover {
   color: var(--color-olive-gray);
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* ══════════════════════════════════════
@@ -155,12 +161,12 @@
 }
 
 .badge-visited::before {
-  content: '';
+  content: "";
   display: block;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .badge-plan {
@@ -170,7 +176,7 @@
 }
 
 .badge-plan::before {
-  content: '';
+  content: "";
   display: block;
   width: 5px;
   height: 5px;
@@ -198,9 +204,17 @@
 }
 
 @keyframes starFill {
-  0%   { transform: scale(0.7); opacity: 0.4; }
-  60%  { transform: scale(1.15); }
-  100% { transform: scale(1);    opacity: 1; }
+  0% {
+    transform: scale(0.7);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* ══════════════════════════════════════
@@ -261,25 +275,73 @@
 
 /* Category gradients — warm palette for each type */
 .art-islands {
-  background: linear-gradient(135deg, #8ecae6 0%, #a8c5d8 30%, #c9b99a 70%, #d4a373 100%);
+  background: linear-gradient(
+    135deg,
+    #8ecae6 0%,
+    #a8c5d8 30%,
+    #c9b99a 70%,
+    #d4a373 100%
+  );
 }
 .art-historical {
-  background: linear-gradient(135deg, #c9b074 0%, #b8956a 40%, #9c7c5c 70%, #7a6048 100%);
+  background: linear-gradient(
+    135deg,
+    #c9b074 0%,
+    #b8956a 40%,
+    #9c7c5c 70%,
+    #7a6048 100%
+  );
 }
 .art-coastal {
-  background: linear-gradient(135deg, #a8d8c8 0%, #8bc4b4 30%, #c4a882 60%, #b8956a 100%);
+  background: linear-gradient(
+    135deg,
+    #a8d8c8 0%,
+    #8bc4b4 30%,
+    #c4a882 60%,
+    #b8956a 100%
+  );
 }
 .art-mountains {
-  background: linear-gradient(135deg, #8a9e8c 0%, #7a8e7c 30%, #9e8a76 60%, #8a7668 100%);
+  background: linear-gradient(
+    135deg,
+    #8a9e8c 0%,
+    #7a8e7c 30%,
+    #9e8a76 60%,
+    #8a7668 100%
+  );
+}
+.art-waterfalls {
+  background: linear-gradient(
+    135deg,
+    #9fc8d4 0%,
+    #86b0c0 30%,
+    #a8a894 65%,
+    #8a8c78 100%
+  );
+}
+.art-farms {
+  background: linear-gradient(
+    135deg,
+    #b8c48a 0%,
+    #9eae72 30%,
+    #c4a15e 65%,
+    #a87a4a 100%
+  );
 }
 .art-cities {
-  background: linear-gradient(135deg, #c4b09a 0%, #9e8a76 30%, #7a6856 60%, #5e5044 100%);
+  background: linear-gradient(
+    135deg,
+    #c4b09a 0%,
+    #9e8a76 30%,
+    #7a6856 60%,
+    #5e5044 100%
+  );
 }
 
 /* Art overlay noise texture */
 .category-art::after,
 .category-art-sm::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
@@ -292,7 +354,11 @@
 .category-art .art-vignette {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.12) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
 }
 
 /* ══════════════════════════════════════
@@ -305,7 +371,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
   cursor: default;
 }
 

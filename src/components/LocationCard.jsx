@@ -1,22 +1,36 @@
-import { MapPin } from 'lucide-react';
-import StatusBadge from './StatusBadge';
-import StarRating from './StarRating';
-import ExternalLinks from './ExternalLinks';
+import { MapPin } from "lucide-react";
+import StatusBadge from "./StatusBadge";
+import StarRating from "./StarRating";
+import ExternalLinks from "./ExternalLinks";
 
 function getCategoryClass(category) {
   const map = {
-    Islands: 'art-islands',
-    Historical: 'art-historical',
-    Coastal: 'art-coastal',
-    Mountains: 'art-mountains',
-    Cities: 'art-cities',
+    Islands: "art-islands",
+    Historical: "art-historical",
+    Coastal: "art-coastal",
+    Mountains: "art-mountains",
+    Waterfalls: "art-waterfalls",
+    Farms: "art-farms",
+    Cities: "art-cities",
   };
-  return map[category] ?? 'art-islands';
+  return map[category] ?? "art-islands";
 }
 
 export default function LocationCard({ location, index = 0 }) {
-  const { title, category, description, whatsSpecial, location: loc, status, rating, links, imageUrl } = location;
-  const fullImageUrl = imageUrl?.startsWith('/') ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}` : imageUrl;
+  const {
+    title,
+    category,
+    description,
+    whatsSpecial,
+    location: loc,
+    status,
+    rating,
+    links,
+    imageUrl,
+  } = location;
+  const fullImageUrl = imageUrl?.startsWith("/")
+    ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
+    : imageUrl;
 
   return (
     <article
@@ -25,9 +39,16 @@ export default function LocationCard({ location, index = 0 }) {
       aria-label={`${title}, ${loc.country}`}
     >
       {/* Image or Category Art Panel */}
-      <div className={`category-art ${!imageUrl ? getCategoryClass(category) : ''}`}>
+      <div
+        className={`category-art ${!imageUrl ? getCategoryClass(category) : ""}`}
+      >
         {imageUrl ? (
-          <img src={fullImageUrl} alt={title} className="category-img" loading="lazy" />
+          <img
+            src={fullImageUrl}
+            alt={title}
+            className="category-img"
+            loading="lazy"
+          />
         ) : (
           <div className="art-vignette" />
         )}
