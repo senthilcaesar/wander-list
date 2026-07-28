@@ -2,6 +2,7 @@ import { MapPin } from "lucide-react";
 import StatusBadge from "./StatusBadge";
 import StarRating from "./StarRating";
 import ExternalLinks from "./ExternalLinks";
+import { getGoogleMapsUrl } from "../utils/maps";
 
 function getCategoryClass(category) {
   const map = {
@@ -30,6 +31,10 @@ export default function LocationListItem({ location, index = 0 }) {
   const fullImageUrl = imageUrl?.startsWith("/")
     ? `${import.meta.env.BASE_URL}${imageUrl.slice(1)}`
     : imageUrl;
+  const linksWithMap = [
+    ...links,
+    { label: "View on Map", url: getGoogleMapsUrl(title, loc) },
+  ];
 
   return (
     <article
@@ -69,7 +74,7 @@ export default function LocationListItem({ location, index = 0 }) {
         <div className="list-item-right">
           <StatusBadge status={status} />
           {rating > 0 && <StarRating rating={rating} />}
-          <ExternalLinks links={links} />
+          <ExternalLinks links={linksWithMap} />
         </div>
       </div>
     </article>

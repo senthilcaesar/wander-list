@@ -1,14 +1,16 @@
 /* =====================================================
    WANDER LIST — GLOBAL STYLES & RESET
    ===================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400&display=swap");
 
-@import './styles/tokens.css';
-@import './styles/components.css';
-@import './styles/layout.css';
+@import "./styles/tokens.css";
+@import "./styles/components.css";
+@import "./styles/layout.css";
 
 /* ── Reset ── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,10 +28,13 @@ body {
   line-height: var(--lh-relaxed);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
 }
@@ -58,7 +63,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-parchment);
+  background: var(--color-warm-sand);
   border-bottom: 1px solid var(--color-border-cream);
   backdrop-filter: blur(8px);
 }
@@ -81,7 +86,9 @@ main {
   background: var(--color-ivory);
   border: 1px solid var(--color-border-warm);
   border-radius: var(--radius-lg);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .header-search:focus-within {
@@ -114,7 +121,9 @@ main {
 }
 
 /* Remove native search cancel button */
-.search-input::-webkit-search-cancel-button { display: none; }
+.search-input::-webkit-search-cancel-button {
+  display: none;
+}
 
 .search-clear {
   position: absolute;
@@ -129,7 +138,9 @@ main {
   background: var(--color-warm-sand);
   color: var(--color-stone-gray);
   cursor: pointer;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .search-clear:hover {
@@ -216,13 +227,18 @@ main {
   font-size: 17px;
   line-height: 1;
   cursor: pointer;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
   flex-shrink: 0;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.10);
-  box-shadow: #e8e6dc 0px 0px 0px 0px, #c2c0b6 0px 0px 0px 1px;
+  transform: scale(1.1);
+  box-shadow:
+    #e8e6dc 0px 0px 0px 0px,
+    #c2c0b6 0px 0px 0px 1px;
 }
 
 .theme-toggle:active {

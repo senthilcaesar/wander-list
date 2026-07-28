@@ -371,6 +371,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-card-right);
   transition:
     transform var(--transition-base),
     box-shadow var(--transition-base);

@@ -14,6 +14,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/rockport.jpg",
     links: [
       { label: "Town Info", url: "https://www.rockportma.gov/" },
       { label: "Visitor Guide", url: "https://rockportusa.com/" },
@@ -34,6 +35,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/russell-orchards.jpg",
     links: [
       { label: "Official Site", url: "https://www.russellorchards.com/" },
     ],
@@ -53,6 +55,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/plum-island.jpg",
     links: [
       {
         label: "Wildlife Refuge",
@@ -75,6 +78,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/mount-monadnock.jpg",
     links: [
       {
         label: "State Park",
@@ -101,6 +105,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/jiminy-peak.jpg",
     links: [{ label: "Official Site", url: "https://www.jiminypeak.com/" }],
   },
   {
@@ -118,6 +123,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/gunstock.jpg",
     links: [{ label: "Official Site", url: "https://www.gunstock.com/" }],
   },
   {
@@ -135,6 +141,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/niagara-falls.jpg",
     links: [
       { label: "State Park", url: "https://www.niagarafallsstatepark.com/" },
       { label: "Niagara Parks", url: "https://www.niagaraparks.com/" },
@@ -155,10 +162,11 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/la-jolla-cove.jpg",
     links: [
       {
         label: "Visitor Info",
-        url: "https://www.sandiego.gov/lifeguards/beaches/lajolla",
+        url: "https://www.sandiego.gov/lifeguards/beaches/cove",
       },
     ],
   },
@@ -177,6 +185,7 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/torrey-pines-gliderport.jpg",
     links: [{ label: "Official Site", url: "https://www.flytorrey.com/" }],
   },
   {
@@ -194,10 +203,11 @@ export const locations = [
     },
     status: "visited",
     rating: 0,
+    imageUrl: "/images/sunset-cliffs.jpg",
     links: [
       {
         label: "Park Info",
-        url: "https://www.sandiego.gov/park-and-recreation/parks/regional/shoreline/sunsetcliffs",
+        url: "https://www.sandiego.gov/park-and-recreation/parks/regional/shoreline/sunset",
       },
     ],
   },
@@ -224,102 +234,6 @@ export const locations = [
     ],
   },
   {
-    id: 2,
-    title: "Kyoto",
-    category: "Historical",
-    description:
-      "Japan's ancient capital layers centuries of history beneath a quiet, contemplative surface. Bamboo groves, moss temples, and the ghost of old Japan linger in every stone-paved lane.",
-    whatsSpecial:
-      "The Fushimi Inari thousands of vermillion torii gates climbing the mountain at dawn, before the crowds arrive — a genuinely sacred corridor.",
-    location: { city: "Kyoto", country: "Japan", continent: "Asia" },
-    status: "plan-to-visit",
-    rating: 0,
-    links: [
-      { label: "UNESCO Sites", url: "https://whc.unesco.org/en/list/688" },
-      { label: "Travel Blog", url: "https://www.japan-guide.com/e/e2158.html" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Amalfi Coast",
-    category: "Coastal",
-    description:
-      "A UNESCO-listed stretch of coastline where lemon groves tumble down vertiginous cliffs to turquoise coves. Each village clings to the rock like a painted postcard defying gravity.",
-    whatsSpecial:
-      "Driving the Nastro d'Argento road at dawn — hairpin turns, empty roads, and the Mediterranean shimmering hundreds of metres below.",
-    location: { city: "Positano", country: "Italy", continent: "Europe" },
-    status: "visited",
-    rating: 4,
-    links: [
-      { label: "UNESCO Heritage", url: "https://whc.unesco.org/en/list/830" },
-      {
-        label: "Boat Tours",
-        url: "https://www.amalficoast.it/en/ferries-amalfi-coast",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Patagonia",
-    category: "Mountains",
-    description:
-      "At the bottom of the world, Patagonia's granite spires pierce storm-wracked skies above ancient glaciers and the infinite Pampas. Wilderness on a scale that recalibrates everything.",
-    whatsSpecial:
-      "Standing at Base Torres del Paine at first light — the towers glow pink before the world wakes, reflected in an ice-cold lagoon below.",
-    location: {
-      city: "Torres del Paine",
-      country: "Chile",
-      continent: "South America",
-    },
-    status: "plan-to-visit",
-    rating: 0,
-    links: [
-      { label: "National Park", url: "https://www.parquetorresdelpaine.cl/" },
-      { label: "Trekking Routes", url: "https://www.trekkingchile.com/" },
-    ],
-  },
-  {
-    id: 5,
-    title: "Bali",
-    category: "Islands",
-    description:
-      "The Island of Gods remains a place of genuine spiritual depth beneath the tourist surface — ancient temples buried in jungle, rice terraces carved over centuries, offerings on every doorstep.",
-    whatsSpecial:
-      "The water temple ritual at Pura Tirta Empul — bathing in sacred spring water alongside Balinese families still performing the same purification rites from the 10th century.",
-    location: { city: "Ubud", country: "Indonesia", continent: "Asia" },
-    status: "visited",
-    rating: 4,
-    links: [
-      {
-        label: "Culture Guide",
-        url: "https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/bali",
-      },
-      { label: "Temple Map", url: "https://www.bali.com/bali-temples.html" },
-    ],
-  },
-  {
-    id: 6,
-    title: "Marrakech",
-    category: "Cities",
-    description:
-      "A sensory overload in the best possible way — the medina is a labyrinth of souks, riads, and spice merchants. Every alley has a secret courtyard; every rooftop has a story.",
-    whatsSpecial:
-      "Getting genuinely lost in the medina at noon — the smell of leather tanneries, the sound of a distant muezzin, a cool fountain courtyard appearing from nowhere.",
-    location: { city: "Marrakech", country: "Morocco", continent: "Africa" },
-    status: "plan-to-visit",
-    rating: 0,
-    links: [
-      {
-        label: "Medina Guide",
-        url: "https://www.lonelyplanet.com/morocco/marrakesh/the-souqs-of-marrakech",
-      },
-      {
-        label: "Riad Stays",
-        url: "https://www.booking.com/city/ma/marrakech.html",
-      },
-    ],
-  },
-  {
     id: 7,
     title: "New York City",
     category: "Cities",
@@ -330,78 +244,93 @@ export const locations = [
     location: { city: "Manhattan", country: "USA", continent: "North America" },
     status: "visited",
     rating: 4,
+    imageUrl: "/images/nyc.jpg",
     links: [
       { label: "The High Line", url: "https://www.thehighline.org/" },
       { label: "NYC Guide", url: "https://www.nycgo.com/" },
     ],
   },
   {
-    id: 8,
-    title: "Cape Town",
-    category: "Coastal",
+    id: 21,
+    title: "Chicago",
+    category: "Cities",
     description:
-      "Hemmed between mountain and ocean, Cape Town is one of the most dramatically situated cities on Earth. Penguin colonies, wine estates, and the ghost of Mandela's imprisonment occupy the same small geography.",
+      "A muscular grid of steel and glass on the shore of Lake Michigan, built on a scale that still startles. The birthplace of the skyscraper wears its architectural ambition on every block, softened by miles of lakefront park.",
     whatsSpecial:
-      "Table Mountain at sunrise before the cloud tablecloth rolls in — the whole Cape Peninsula laid out below, and the ocean on three sides.",
+      'Standing under Cloud Gate — "The Bean" — in Millennium Park at golden hour, the whole skyline warped and doubled in its mirrored steel.',
     location: {
-      city: "Cape Town",
-      country: "South Africa",
-      continent: "Africa",
-    },
-    status: "plan-to-visit",
-    rating: 0,
-    links: [
-      { label: "Table Mountain", url: "https://www.tablemountain.net/" },
-      { label: "Robben Island", url: "https://www.robben-island.org.za/" },
-    ],
-  },
-  {
-    id: 9,
-    title: "Prague",
-    category: "Historical",
-    description:
-      "The city that the 20th century largely spared. Prague's medieval core is the best-preserved in Europe — Baroque, Gothic and Art Nouveau layered so densely that every bridge and square is a history lesson you enjoy taking.",
-    whatsSpecial:
-      "Crossing Charles Bridge alone at 5 AM in October — stone saints loom in the fog, the river below invisible, the Old Town emerging from the mist.",
-    location: {
-      city: "Prague",
-      country: "Czech Republic",
-      continent: "Europe",
+      city: "Chicago, Illinois",
+      country: "United States",
+      continent: "North America",
     },
     status: "visited",
-    rating: 5,
+    rating: 0,
+    imageUrl: "/images/chicago.jpg",
+    links: [{ label: "Choose Chicago", url: "https://www.choosechicago.com/" }],
+  },
+  {
+    id: 22,
+    title: "Columbus",
+    category: "Cities",
+    description:
+      "Ohio's capital and largest city, a low-key Midwestern hub built around a wide, walkable downtown and one of the country's best zoos. Less flash than the coasts, more genuine civic pride than its reputation suggests.",
+    whatsSpecial:
+      "The North Market — a century-old public market where the city's food scene actually lives, stall after stall of it under one roof.",
+    location: {
+      city: "Columbus, Ohio",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/columbus.jpg",
     links: [
       {
-        label: "Charles Bridge",
-        url: "https://www.prague.eu/en/object/places/127/charles-bridge-karluv-most",
-      },
-      {
-        label: "City Guide",
-        url: "https://www.lonelyplanet.com/czech-republic/prague",
+        label: "Experience Columbus",
+        url: "https://www.experiencecolumbus.com/",
       },
     ],
   },
   {
-    id: 10,
-    title: "The Maldives",
-    category: "Islands",
+    id: 23,
+    title: "Rhode Island",
+    category: "Coastal",
     description:
-      "A scattering of coral atolls barely above sea level — the Maldives is the world's lowest country and perhaps its most beguiling. The water is glass-clear in colours that don't seem real.",
+      "The smallest state carries an outsized coastline — the Gilded Age mansions of Newport sit a short drive from quiet fishing villages, all packed into a state you can cross end to end in under an hour.",
     whatsSpecial:
-      "A glass-floor overwater bungalow at night — rays and reef sharks patrol below in the blue-lit shallows, and the Milky Way stretches overhead.",
+      "Walking the Cliff Walk in Newport — a public footpath threading between Gilded Age mansions on one side and Atlantic surf breaking on rock on the other.",
     location: {
-      city: "North Malé Atoll",
-      country: "Maldives",
-      continent: "Asia",
+      city: "Newport, Rhode Island",
+      country: "United States",
+      continent: "North America",
     },
-    status: "plan-to-visit",
+    status: "visited",
     rating: 0,
+    imageUrl: "/images/rhode-island.jpg",
     links: [
-      { label: "Resort Guide", url: "https://www.visitmaldives.com/en" },
-      {
-        label: "Marine Life",
-        url: "https://www.iucnredlist.org/search?query=maldives+reef",
-      },
+      { label: "Visit Rhode Island", url: "https://www.visitrhodeisland.com/" },
+      { label: "Discover Newport", url: "https://www.discovernewport.org/" },
+    ],
+  },
+  {
+    id: 24,
+    title: "Boston",
+    category: "Cities",
+    description:
+      "A dense, walkable city that punches well above its size — cobblestone colonial streets butt straight up against glass towers and a world-class university skyline just across the river.",
+    whatsSpecial:
+      "Walking the Freedom Trail's red brick line through the North End at dusk, three centuries of history compressed into a couple of miles on foot.",
+    location: {
+      city: "Boston, Massachusetts",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/boston.jpg",
+    links: [
+      { label: "Boston.gov", url: "https://www.boston.gov/" },
+      { label: "Visit Boston", url: "https://www.bostonusa.com/" },
     ],
   },
 ];
