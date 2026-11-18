@@ -17,7 +17,7 @@ function getCategoryClass(category) {
   return map[category] ?? "art-islands";
 }
 
-export default function LocationListItem({ location, index = 0 }) {
+export default function LocationListItem({ location, index = 0, onOpen }) {
   const {
     title,
     category,
@@ -38,7 +38,19 @@ export default function LocationListItem({ location, index = 0 }) {
 
   return (
     <article
-      className="location-list-item card-enter"
+      className="location-list-item card-enter is-clickable"
+      role="button"
+      tabIndex={0}
+      onClick={(e) => {
+        if (!e.target.closest("a")) onOpen?.(location.id);
+      }}
+      onKeyDown={(e) => {
+        if (e.target !== e.currentTarget) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen?.(location.id);
+        }
+      }}
       style={{ animationDelay: `${index * 40}ms` }}
       aria-label={`${title}, ${loc.country}`}
     >

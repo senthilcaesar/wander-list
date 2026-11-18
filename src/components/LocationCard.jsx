@@ -17,12 +17,11 @@ function getCategoryClass(category) {
   return map[category] ?? "art-islands";
 }
 
-export default function LocationCard({ location, index = 0 }) {
+export default function LocationCard({ location, index = 0, onOpen }) {
   const {
     title,
     category,
     description,
-    whatsSpecial,
     location: loc,
     status,
     rating,
@@ -39,7 +38,19 @@ export default function LocationCard({ location, index = 0 }) {
 
   return (
     <article
-      className="location-card card-enter"
+      className="location-card card-enter is-clickable"
+      role="button"
+      tabIndex={0}
+      onClick={(e) => {
+        if (!e.target.closest("a")) onOpen?.(location.id);
+      }}
+      onKeyDown={(e) => {
+        if (e.target !== e.currentTarget) return;
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen?.(location.id);
+        }
+      }}
       style={{ animationDelay: `${index * 60}ms` }}
       aria-label={`${title}, ${loc.country}`}
     >
@@ -75,12 +86,6 @@ export default function LocationCard({ location, index = 0 }) {
 
         {/* Description */}
         <p className="card-description">{description}</p>
-
-        {/* What's Special */}
-        <div>
-          <div className="special-label">✦ What's Special</div>
-          <p className="card-special">{whatsSpecial}</p>
-        </div>
 
         {/* Footer */}
         <div className="card-footer">

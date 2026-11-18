@@ -1,7 +1,8 @@
-import { useState, useMemo, useTransition, useRef, useEffect } from "react";
+import { useState, useMemo, useTransition, useRef, useEffect, useCallback } from "react";
 import Header from "./components/Header";
 import LocationCard from "./components/LocationCard";
 import LocationListItem from "./components/LocationListItem";
+import LocationDrawer from "./components/LocationDrawer";
 import { locations } from "./data/locations";
 import { MapPin } from "lucide-react";
 
@@ -25,6 +26,7 @@ export default function App() {
   const [isDark, setIsDark] = useState(false);
   const [query, setQuery] = useState("");
   const [isPending, startTransition] = useTransition();
+  const [selectedId, setSelectedId] = useState(null);
   const viewKey = useRef(0);
 
   useEffect(() => {
@@ -48,6 +50,20 @@ export default function App() {
         loc.location.continent.toLowerCase().includes(q),
     );
   }, [query]);
+
+  const selectedIndex = filtered.findIndex((l) => l.id === selectedId);
+  const selected = selectedIndex >= 0 ? filtered[selectedIndex] : null;
+  const closeDrawer = useCallback(() => setSelectedId(null), []);
+  const stepDrawer = useCallback(
+    (delta) => {
+      if (selectedIndex < 0) return;
+      const next = (selectedIndex + delta + filtered.length) % filtered.length;
+      setSelectedId(filtered[next].id);
+    },
+    [filtered, selectedIndex],
+  );
+  const showPrev = useCallback(() => stepDrawer(-1), [stepDrawer]);
+  const showNext = useCallback(() => stepDrawer(1), [stepDrawer]);
 
   function handleToggleTheme() {
     setIsDark((prev) => !prev);
@@ -89,7 +105,12 @@ export default function App() {
               }}
             >
               {filtered.map((loc, i) => (
-                <LocationCard key={loc.id} location={loc} index={i} />
+                <LocationCard
+                  key={loc.id}
+                  location={loc}
+                  index={i}
+                  onOpen={setSelectedId}
+                />
               ))}
             </div>
           ) : (
@@ -102,12 +123,26 @@ export default function App() {
               }}
             >
               {filtered.map((loc, i) => (
-                <LocationListItem key={loc.id} location={loc} index={i} />
+                <LocationListItem
+                  key={loc.id}
+                  location={loc}
+                  index={i}
+                  onOpen={setSelectedId}
+                />
               ))}
             </div>
           )}
         </div>
       </main>
+
+      {selected && (
+        <LocationDrawer
+          location={selected}
+          onClose={closeDrawer}
+          onPrev={showPrev}
+          onNext={showNext}
+        />
+      )}
 
       <footer className="site-footer">
         <div className="container">

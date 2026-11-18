@@ -1,65 +1,23 @@
 export const locations = [
   {
-    id: 18,
-    title: "Rockport",
-    category: "Coastal",
+    id: 1,
+    title: "Mount Lafayette",
+    category: "Mountains",
     description:
-      "A former granite-quarrying town on the tip of Cape Ann, north of Boston. The working harbour has largely given way to galleries and studios, but the fishing shacks and breakwaters are still doing their original job.",
-    whatsSpecial:
-      "Motif No. 1 — the red fishing shack on Bradley Wharf, reputedly the most painted building in America, and still the thing everyone sets up an easel in front of.",
+      "This extremely popular hike in the White Mountains of New Hampshire is one of the best day hikes in the area for a variety of reasons. Beginning near the Lafayette Campground in Franconia Notch State Park, this great hike offers some of the best views in New England! As a bonus, you will ascend three peaks including the highest mountain outside the Presidential Range - Mount Lafayette.",
+    whatsSpecial: "Best for Hiking and Views.",
     location: {
-      city: "Rockport, Massachusetts",
+      city: "Franconia Notch State Park",
       country: "United States",
       continent: "North America",
     },
     status: "visited",
-    rating: 0,
-    imageUrl: "/images/rockport.jpg",
-    links: [
-      { label: "Town Info", url: "https://www.rockportma.gov/" },
-      { label: "Visitor Guide", url: "https://rockportusa.com/" },
-    ],
-  },
-  {
-    id: 19,
-    title: "Russell Orchards",
-    category: "Farms",
-    description:
-      "A family farm and winery on the edge of Ipswich, with pick-your-own fields, a barn store, and farm animals out back. A New England autumn institution rather than a tourist attraction.",
-    whatsSpecial:
-      "Cider donuts made on site, eaten warm — plus a hard cider and fruit wine list from their own orchard.",
-    location: {
-      city: "Ipswich, Massachusetts",
-      country: "United States",
-      continent: "North America",
-    },
-    status: "visited",
-    rating: 0,
-    imageUrl: "/images/russell-orchards.jpg",
-    links: [
-      { label: "Official Site", url: "https://www.russellorchards.com/" },
-    ],
-  },
-  {
-    id: 20,
-    title: "Plum Island Beach",
-    category: "Coastal",
-    description:
-      "A barrier island off Newburyport, most of it given over to the Parker River National Wildlife Refuge. Miles of open sand and dune backed by salt marsh, with far fewer people than the beaches further south.",
-    whatsSpecial:
-      "It's a major stop on the Atlantic Flyway — the refuge draws serious birders through the migration seasons, and the dunes stay quiet even in summer.",
-    location: {
-      city: "Newburyport, Massachusetts",
-      country: "United States",
-      continent: "North America",
-    },
-    status: "visited",
-    rating: 0,
-    imageUrl: "/images/plum-island.jpg",
+    rating: 5,
+    imageUrl: "/images/lafa.png",
     links: [
       {
-        label: "Wildlife Refuge",
-        url: "https://www.fws.gov/refuge/parker-river",
+        label: "Travel Guide",
+        url: "https://www.alltrails.com/trail/us/new-hampshire/mount-lafayette-and-franconia-ridge-trail-loop",
       },
     ],
   },
@@ -91,6 +49,50 @@ export const locations = [
     ],
   },
   {
+    id: 24,
+    title: "Boston",
+    category: "Cities",
+    description:
+      "A dense, walkable city that punches well above its size — cobblestone colonial streets butt straight up against glass towers and a world-class university skyline just across the river.",
+    whatsSpecial:
+      "Walking the Freedom Trail's red brick line through the North End at dusk, three centuries of history compressed into a couple of miles on foot.",
+    location: {
+      city: "Boston, Massachusetts",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/boston.jpg",
+    links: [
+      { label: "Boston.gov", url: "https://www.boston.gov/" },
+      { label: "Visit Boston", url: "https://www.bostonusa.com/" },
+    ],
+  },
+  {
+    id: 20,
+    title: "Plum Island Beach",
+    category: "Coastal",
+    description:
+      "A barrier island off Newburyport, most of it given over to the Parker River National Wildlife Refuge. Miles of open sand and dune backed by salt marsh, with far fewer people than the beaches further south.",
+    whatsSpecial:
+      "It's a major stop on the Atlantic Flyway — the refuge draws serious birders through the migration seasons, and the dunes stay quiet even in summer.",
+    location: {
+      city: "Newburyport, Massachusetts",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/plum-island.jpg",
+    links: [
+      {
+        label: "Wildlife Refuge",
+        url: "https://www.fws.gov/refuge/parker-river",
+      },
+    ],
+  },
+  {
     id: 12,
     title: "Jiminy Peak Mountain Resort",
     category: "Mountains",
@@ -107,24 +109,6 @@ export const locations = [
     rating: 0,
     imageUrl: "/images/jiminy-peak.jpg",
     links: [{ label: "Official Site", url: "https://www.jiminypeak.com/" }],
-  },
-  {
-    id: 13,
-    title: "Gunstock Mountain Resort",
-    category: "Mountains",
-    description:
-      "A community-owned resort in the Lakes Region of New Hampshire, looking out over Lake Winnipesaukee. Skiing and night riding in winter, zip lines, a mountain coaster and hiking trails the rest of the year.",
-    whatsSpecial:
-      "The view of Winnipesaukee from the summit — the largest lake in New Hampshire spread out below with the White Mountains behind it.",
-    location: {
-      city: "Gilford, New Hampshire",
-      country: "United States",
-      continent: "North America",
-    },
-    status: "visited",
-    rating: 0,
-    imageUrl: "/images/gunstock.jpg",
-    links: [{ label: "Official Site", url: "https://www.gunstock.com/" }],
   },
   {
     id: 14,
@@ -146,6 +130,65 @@ export const locations = [
       { label: "State Park", url: "https://www.niagarafallsstatepark.com/" },
       { label: "Niagara Parks", url: "https://www.niagaraparks.com/" },
     ],
+  },
+  {
+    id: 19,
+    title: "Russell Orchards",
+    category: "Farms",
+    description:
+      "A family farm and winery on the edge of Ipswich, with pick-your-own fields, a barn store, and farm animals out back. A New England autumn institution rather than a tourist attraction.",
+    whatsSpecial:
+      "Cider donuts made on site, eaten warm — plus a hard cider and fruit wine list from their own orchard.",
+    location: {
+      city: "Ipswich, Massachusetts",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/russell-orchards.jpg",
+    links: [
+      { label: "Official Site", url: "https://www.russellorchards.com/" },
+    ],
+  },
+  {
+    id: 18,
+    title: "Rockport",
+    category: "Coastal",
+    description:
+      "A former granite-quarrying town on the tip of Cape Ann, north of Boston. The working harbour has largely given way to galleries and studios, but the fishing shacks and breakwaters are still doing their original job.",
+    whatsSpecial:
+      "Motif No. 1 — the red fishing shack on Bradley Wharf, reputedly the most painted building in America, and still the thing everyone sets up an easel in front of.",
+    location: {
+      city: "Rockport, Massachusetts",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/rockport.jpg",
+    links: [
+      { label: "Town Info", url: "https://www.rockportma.gov/" },
+      { label: "Visitor Guide", url: "https://rockportusa.com/" },
+    ],
+  },
+  {
+    id: 13,
+    title: "Gunstock Mountain Resort",
+    category: "Mountains",
+    description:
+      "A community-owned resort in the Lakes Region of New Hampshire, looking out over Lake Winnipesaukee. Skiing and night riding in winter, zip lines, a mountain coaster and hiking trails the rest of the year.",
+    whatsSpecial:
+      "The view of Winnipesaukee from the summit — the largest lake in New Hampshire spread out below with the White Mountains behind it.",
+    location: {
+      city: "Gilford, New Hampshire",
+      country: "United States",
+      continent: "North America",
+    },
+    status: "visited",
+    rating: 0,
+    imageUrl: "/images/gunstock.jpg",
+    links: [{ label: "Official Site", url: "https://www.gunstock.com/" }],
   },
   {
     id: 15,
@@ -208,28 +251,6 @@ export const locations = [
       {
         label: "Park Info",
         url: "https://www.sandiego.gov/park-and-recreation/parks/regional/shoreline/sunset",
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "Mount Lafayette",
-    category: "Mountains",
-    description:
-      "This extremely popular hike in the White Mountains of New Hampshire is one of the best day hikes in the area for a variety of reasons. Beginning near the Lafayette Campground in Franconia Notch State Park, this great hike offers some of the best views in New England! As a bonus, you will ascend three peaks including the highest mountain outside the Presidential Range - Mount Lafayette.",
-    whatsSpecial: "Best for Hiking and Views.",
-    location: {
-      city: "Franconia Notch State Park",
-      country: "United States",
-      continent: "North America",
-    },
-    status: "visited",
-    rating: 5,
-    imageUrl: "/images/lafa.png",
-    links: [
-      {
-        label: "Travel Guide",
-        url: "https://www.alltrails.com/trail/us/new-hampshire/mount-lafayette-and-franconia-ridge-trail-loop",
       },
     ],
   },
@@ -313,24 +334,25 @@ export const locations = [
     ],
   },
   {
-    id: 24,
-    title: "Boston",
-    category: "Cities",
+    id: 25,
+    title: "Puerto Rico",
+    category: "Islands",
     description:
-      "A dense, walkable city that punches well above its size — cobblestone colonial streets butt straight up against glass towers and a world-class university skyline just across the river.",
+      "A Caribbean island with a five-century-old colonial capital, rainforest-covered mountains, and a coastline that runs from surf breaks in the northwest to quiet beaches on Vieques and Culebra.",
     whatsSpecial:
-      "Walking the Freedom Trail's red brick line through the North End at dusk, three centuries of history compressed into a couple of miles on foot.",
+      "Mosquito Bay on Vieques — one of the brightest bioluminescent bays in the world, where every paddle stroke and fish trail glows blue-green on a moonless night.",
     location: {
-      city: "Boston, Massachusetts",
+      city: "San Juan, Puerto Rico",
       country: "United States",
       continent: "North America",
     },
-    status: "visited",
+    status: "plan-to-visit",
     rating: 0,
-    imageUrl: "/images/boston.jpg",
+    imageUrl: "/images/puerto-rico.jpg",
     links: [
-      { label: "Boston.gov", url: "https://www.boston.gov/" },
-      { label: "Visit Boston", url: "https://www.bostonusa.com/" },
+      { label: "Discover Puerto Rico", url: "https://www.discoverpuertorico.com/" },
+      { label: "San Juan Historic Site", url: "https://www.nps.gov/saju/" },
+      { label: "El Yunque", url: "https://www.fs.usda.gov/elyunque" },
     ],
   },
 ];

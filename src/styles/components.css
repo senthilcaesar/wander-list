@@ -607,3 +607,239 @@
   letter-spacing: 0.5px;
   margin-bottom: 2px;
 }
+
+/* ══════════════════════════════════════
+   CLICKABLE CARDS + DETAIL PANEL
+   ══════════════════════════════════════ */
+.location-card.is-clickable,
+.location-list-item.is-clickable {
+  cursor: pointer;
+}
+
+.location-card.is-clickable:focus-visible,
+.location-list-item.is-clickable:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.drawer-root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+
+.drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 19, 0.35);
+  backdrop-filter: blur(4px);
+  animation: drawerFade 200ms ease;
+}
+
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(520px, 100vw);
+  background: var(--color-ivory);
+  border-left: 1px solid var(--color-border-warm);
+  box-shadow: var(--shadow-whisper-deep);
+  overflow-y: auto;
+  animation: drawerSlide 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.drawer-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--color-warm-sand);
+}
+
+.drawer-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: drawerFade 300ms ease;
+}
+
+.drawer-controls {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.drawer-icon-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(250, 250, 249, 0.92);
+  color: #141413;
+  box-shadow: var(--shadow-whisper);
+  transition: transform var(--transition-fast);
+}
+
+.drawer-icon-btn:hover {
+  transform: scale(1.08);
+}
+
+.drawer-body {
+  padding: var(--space-6) var(--space-8) var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.drawer-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-sub);
+  font-weight: var(--fw-serif);
+  line-height: var(--lh-snug);
+  color: var(--color-near-black);
+}
+
+.drawer-description {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--color-charcoal-warm);
+}
+
+.drawer-special {
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-parchment);
+  border-radius: var(--radius-md);
+}
+
+.drawer-special .special-label {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.drawer-special p {
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--fs-body-sm);
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  color: var(--color-dark-warm);
+}
+
+@keyframes drawerSlide {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes drawerFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .drawer-body {
+    padding: var(--space-5) var(--space-4) var(--space-8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drawer,
+  .drawer-backdrop,
+  .drawer-media img {
+    animation: none;
+  }
+}
+
+/* ══════════════════════════════════════
+   CARD SEPARATION FROM PAGE BACKGROUND
+   White cards with a defined edge on the platinum page
+   ══════════════════════════════════════ */
+/* Layered shadows: a tight contact shadow + a soft ambient one,
+   deepening and lifting on hover */
+:root {
+  --card-shadow:
+    0 1px 1px rgba(20, 20, 19, 0.04),
+    0 2px 4px rgba(20, 20, 19, 0.05),
+    0 8px 16px rgba(20, 20, 19, 0.06),
+    0 20px 40px rgba(20, 20, 19, 0.07);
+  --card-shadow-hover:
+    0 2px 2px rgba(20, 20, 19, 0.04),
+    0 6px 10px rgba(20, 20, 19, 0.06),
+    0 18px 32px rgba(20, 20, 19, 0.10),
+    0 36px 64px rgba(20, 20, 19, 0.12);
+}
+
+[data-theme="dark"] {
+  --card-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.30),
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    0 20px 40px rgba(0, 0, 0, 0.30);
+  --card-shadow-hover:
+    0 2px 4px rgba(0, 0, 0, 0.35),
+    0 18px 36px rgba(0, 0, 0, 0.45),
+    0 36px 64px rgba(0, 0, 0, 0.40);
+}
+
+.location-card {
+  background: var(--color-white);
+  border-color: var(--color-ring-warm);
+  box-shadow: var(--card-shadow);
+  transition:
+    transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color var(--transition-base);
+}
+
+.location-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-ring-deep);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.location-card .category-img {
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.location-card:hover .category-img {
+  transform: scale(1.04);
+}
+
+.locations-list .location-list-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-ring-warm);
+  border-radius: var(--radius-lg);
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+  margin-bottom: var(--space-3);
+  box-shadow: var(--card-shadow);
+  transition:
+    transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.locations-list .location-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .location-card,
+  .location-card .category-img,
+  .locations-list .location-list-item {
+    transition: box-shadow var(--transition-base);
+  }
+  .location-card:hover,
+  .locations-list .location-list-item:hover,
+  .location-card:hover .category-img {
+    transform: none;
+  }
+}
+
+.locations-list {
+  border-top: none;
+}

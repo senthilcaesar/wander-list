@@ -37,9 +37,10 @@
 }
 
 /* ── Card Entrance Animation ── */
+/* "backwards" holds the hidden start state during the stagger delay, then
+   releases the element so hover transforms (card lift) still apply. */
 .card-enter {
-  opacity: 0;
-  animation: cardEntrance 400ms ease forwards;
+  animation: cardEntrance 400ms ease backwards;
 }
 
 @keyframes cardEntrance {

@@ -1,6 +1,6 @@
 /* =====================================================
    WANDER LIST — DESIGN TOKENS
-   Based on DESIGN-claude.md (warm editorial palette)
+   Warm editorial palette on a platinum milky-white base
    ===================================================== */
 
 :root {
@@ -10,10 +10,10 @@
   --color-coral: #d97757;
 
   /* ── Colors: Surface ── */
-  --color-parchment: #f5f4ed;
-  --color-ivory: #faf9f5;
+  --color-parchment: #ebebe8; /* platinum milky white */
+  --color-ivory: #fafaf9;
   --color-white: #ffffff;
-  --color-warm-sand: #e8e6dc;
+  --color-warm-sand: #e2e2de; /* platinum gray */
   --color-dark-surface: #30302e;
   --color-deep-dark: #141413;
 
@@ -25,11 +25,11 @@
   --color-warm-silver: #b0aea5;
 
   /* ── Colors: Borders ── */
-  --color-border-cream: #f0eee6;
-  --color-border-warm: #e8e6dc;
+  --color-border-cream: #e3e3e0;
+  --color-border-warm: #e2e2df;
   --color-border-dark: #30302e;
-  --color-ring-warm: #d1cfc5;
-  --color-ring-deep: #c2c0b6;
+  --color-ring-warm: #d2d2ce;
+  --color-ring-deep: #c3c3bf;
 
   /* ── Colors: Semantic ── */
   --color-error: #b53333;
@@ -39,6 +39,7 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-mono: "DM Mono", monospace;
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
 
   /* ── Font Sizes ── */
   --fs-display: 4rem; /* 64px */
@@ -91,7 +92,7 @@
 
   /* ── Shadows ── */
   --shadow-ring: 0px 0px 0px 1px var(--color-ring-warm);
-  --shadow-ring-warm: #e8e6dc 0px 0px 0px 0px, #d1cfc5 0px 0px 0px 1px;
+  --shadow-ring-warm: #e2e2de 0px 0px 0px 0px, #d2d2ce 0px 0px 0px 1px;
   --shadow-whisper: rgba(0, 0, 0, 0.05) 0px 4px 24px;
   --shadow-whisper-deep: rgba(0, 0, 0, 0.1) 0px 8px 32px;
   --shadow-card-hover:
