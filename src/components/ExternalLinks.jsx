@@ -1,5 +1,3 @@
-import { ExternalLink } from 'lucide-react';
-
 export default function ExternalLinks({ links }) {
   if (!links?.length) return null;
 
@@ -14,7 +12,6 @@ export default function ExternalLinks({ links }) {
           className="link-chip"
         >
           {link.label}
-          <ExternalLink size={10} />
         </a>
       ))}
     </div>
